@@ -107,15 +107,19 @@
         
         /* 主要内容样式更新 */
         .content {
-            max-width: 1400px;
             margin: 40px auto;
             padding: 30px;
             display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(300px, 1fr);
+            grid-template-columns: 1fr;
             gap: 50px;
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
             border-radius: 8px;
+        }
+
+        /* 主页特殊处理 */
+        #home .content {
+            grid-template-columns: minmax(0, 3fr) minmax(300px, 1fr);
         }
 
         /* Important Dates Grid 样式更新 */
@@ -264,13 +268,12 @@
             }
 
             .content {
-                grid-template-columns: 1fr;
                 margin: 20px;
                 padding: 20px;
             }
 
-            .important-dates-grid {
-                padding: 20px;
+            #home .content {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -296,7 +299,7 @@
         .page-section {
             display: none;
             margin: 40px auto;
-            max-width: 1400px;
+            max-width: 1000px;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
@@ -423,7 +426,6 @@
         /* 更新页面内容样式 */
         .page-section:not(#home) .content {
             grid-template-columns: 1fr;
-            max-width: 1000px;
         }
     </style>
 </head>
