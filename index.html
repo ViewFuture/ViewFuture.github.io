@@ -109,17 +109,24 @@
         .content {
             margin: 40px auto;
             padding: 30px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 50px;
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
             border-radius: 8px;
+            max-width: 1000px;
+        }
+
+        .main {
+            padding: 40px;
+        }
+
+        .main p {
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         /* 主页特殊处理 */
         #home .content {
-            grid-template-columns: minmax(0, 3fr) minmax(300px, 1fr);
+            grid-template-columns: minmax(0, 4fr) minmax(250px, 1fr);
         }
 
         /* Important Dates Grid 样式更新 */
@@ -131,7 +138,6 @@
             padding: 30px;
             background-color: var(--light-bg);
             border-radius: 8px;
-            max-width: 1200px;
         }
 
         .date-item {
@@ -169,10 +175,6 @@
             color: var(--accent-color);
         }
 
-        .main {
-            padding: 40px;
-        }
-
         .main h2 {
             color: var(--primary-color);
             font-family: var(--header-font);
@@ -203,12 +205,15 @@
         /* 右侧边栏更新 */
         .sidebar-fixed {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 80px;
-            display: none; /* 默认隐藏 */
+            margin-top: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            display: none;
         }
 
         /* 只在首页显示侧边栏 */
@@ -267,13 +272,8 @@
                 padding: 0 15px;
             }
 
-            .content {
+            .content, #home .sidebar-fixed {
                 margin: 20px;
-                padding: 20px;
-            }
-
-            #home .content {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -452,6 +452,9 @@
     <div id="home" class="page-section active">
         <div class="content">
             <div class="main">
+                <h2>About AIVE 2025</h2>
+                <p>Empowering Workforce Development through Innovation Artificial Intelligence (AI) technologies—including machine learning, natural language processing, and adaptive systems—are reshaping vocational education by enabling skill-centric, industry-aligned training frameworks. These innovations empower educators and institutions to bridge the gap between theoretical knowledge and practical workplace competencies, preparing learners for evolving labor market demands. As industries increasingly prioritize digital fluency and technical proficiency, vocational educators face challenges in delivering scalable, up-to-date training programs that address rapid technological advancements. AI-driven solutions, recognized for their capabilities in personalized learning pathways, real-time skill assessment, and automated content adaptation, are proving critical for modernizing vocational education. Applications range from AI-powered simulation platforms for hands-on technical training to intelligent career guidance systems that align learner profiles with industry needs, while fostering equitable access to lifelong learning opportunities.</p>
+
                 <h2>Important Dates</h2>
                 <div class="important-dates-grid">
                     <div class="date-item">
@@ -472,6 +475,14 @@
                     </div>
                 </div>
 
+                <h2>Workshop topics of interest include, but are not limited to, the following:</h2>
+                <ul class="topics-list">
+                    <li>• AI-driven curriculum design for industry-specific skill development</li>
+                    <li>• Adaptive assessment tools for competency-based certification</li>
+                    <li>• Ethical frameworks for AI deployment in vocational training</li>
+                    <li>• Collaborative models between educational institutions and employers</li>
+                </ul>
+
                 <h2>Related Conference</h2>
                 <div class="related-conference">
                     <p>This workshop is collocated with ICWL & SETE 2025. For more information, please visit:</p>
@@ -480,15 +491,15 @@
                     </div>
                 </div>
 
-                <h2>About AIVE 2025</h2>
-                <p> Empowering Workforce Development through Innovation Artificial Intelligence (AI) technologies—including machine learning, natural language processing, and adaptive systems—are reshaping vocational education by enabling skill-centric, industry-aligned training frameworks. These innovations empower educators and institutions to bridge the gap between theoretical knowledge and practical workplace competencies, preparing learners for evolving labor market demands. As industries increasingly prioritize digital fluency and technical proficiency, vocational educators face challenges in delivering scalable, up-to-date training programs that address rapid technological advancements. AI-driven solutions, recognized for their capabilities in personalized learning pathways, real-time skill assessment, and automated content adaptation, are proving critical for modernizing vocational education. Applications range from AI-powered simulation platforms for hands-on technical training to intelligent career guidance systems that align learner profiles with industry needs, while fostering equitable access to lifelong learning opportunities.  </p>
-                <h2>Workshop topics of interest include, but are not limited to, the following:</h2>
-                <ul class="topics-list">
-                    <li>• AI-driven curriculum design for industry-specific skill development</li>
-                    <li>• Adaptive assessment tools for competency-based certification</li>
-                    <li>• Ethical frameworks for AI deployment in vocational training</li>
-                    <li>• Collaborative models between educational institutions and employers</li>
-                </ul>
+                <h2>Quick Links</h2>
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#submission" class="link">Paper Submission</a></li>
+                        <li><a href="#registration" class="link">Registration</a></li>
+                        <li><a href="#travel" class="link">Travel Information</a></li>
+                        <li><a href="#contact" class="link">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
